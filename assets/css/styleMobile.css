@@ -1,3 +1,81 @@
+body {
+  position: relative;
+}
+.containerMenu {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 25px;
+  height: 4px;
+  background-color: rgb(33, 46, 71);
+  margin: 7px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+#menu {
+  position: absolute;
+  top: 100px;
+  right: 0;
+  width: 0%;
+  height: 100%;
+  background-color: white;
+  z-index: 200;
+  transition: all;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
+  overflow: hidden;
+  flex-direction: column;
+  gap: 1rem;
+  height: 100%;
+}
+.titleMenu {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+#titleMenuJs {
+  display: none;
+}
+#menu .nav .link-header {
+  color: #4b4b4b;
+  -webkit-animation: 0.4s all;
+  animation: 0.4s all;
+  font-weight: 500;
+  font-size: 16px;
+}
+#menu .nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.titleMenu h1 {
+  font-size: 1rem;
+}
+
+.titleMenu h1:last-child {
+  margin: 5px 0;
+}
 .header-mobile {
   display: none;
   justify-content: space-between;
@@ -15,7 +93,7 @@
 
 .s-main-mobile {
   display: none;
-  padding: 12px;
+  padding: 12px 20px;
   width: 100%;
   flex-direction: column;
   gap: 12px;
@@ -27,7 +105,7 @@
 
 .s-mobile {
   display: none;
-  padding: 12px;
+  padding: 1rem;
   width: 100%;
   flex-direction: column;
   gap: 12px;
@@ -35,8 +113,17 @@
   align-items: center;
   padding-top: 22px;
 }
+.contactMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2.5rem;
+  padding-top: 0.5rem;
+  border-top: 2px solid #f2f2f2;
+  gap: 1rem;
+}
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 768px) {
   .header-desktop,
   .s-main,
   .s-about,
@@ -145,8 +232,7 @@
     height: 90px;
   }
   .s-services .tab-services .btn-tab {
-    padding: 0 2rem 0;
-    width: 300px !important;
+    padding: 0 6rem 0;
   }
   .s-services .TabActiveBtn .under-btn:after {
     right: 120px;
@@ -262,8 +348,237 @@
     top: 0px;
     border-width: 0px 0px 20px 37px;
   }
-  .serviceTowCol{
+  .serviceTowCol {
     flex-direction: column;
     gap: 1rem;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .header-desktop,
+  .s-main,
+  .s-about,
+  .s-steps,
+  .s-blog,
+  .footer {
+    display: none !important;
+  }
+  .s-main-mobile,
+  .s-mobile {
+    align-items: flex-start;
+  }
+  .titleTablet {
+    margin-top: 2.5rem;
+  }
+  .header-mobile {
+    display: flex;
+  }
+  .border-dashed {
+    height: 37px;
+    border-right: 2px dashed #cbcbcb;
+    margin: 0 8px;
+  }
+  .m-right-16 {
+    margin-right: 0px !important;
+  }
+  .bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .s-main-mobile {
+    display: flex;
+  }
+  .title-website h2 {
+    margin: 0;
+  }
+  .text-main,
+  .text {
+    text-align: justify;
+  }
+  .btn-base {
+    width: 50% !important;
+    margin: 0 auto;
+  }
+  .img-mount {
+    width: 100% !important;
+    margin-top: 3rem;
+    object-fit: cover;
+  }
+  .s-about-mobile {
+    display: flex;
+  }
+  .title-website h2 {
+    font-size: 17px;
+  }
+  .w-about {
+    width: 100% !important;
+    margin-top: 2rem;
+  }
+  .box-text-p {
+    display: none;
+    /* position: absolute;
+    left: 0px;
+    top: 200px;
+    width: 190px;
+    height: 110px;
+    background: #ffffff;
+    box-shadow: #f0f0f0 0px 2px 8px 0px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+  }
+  .btn-mobile-about {
+    width: 90% !important;
+    margin-top: 2rem !important;
+    gap: 1rem !important;
+    margin: 0 auto;
+  }
+  .s-mobile {
+    display: flex;
+  }
+  .title-website span {
+    margin: 0 !important;
+    text-align: center;
+  }
+  .s-service-mobile {
+    margin-top: 2rem;
+  }
+  .s-services .tab-services {
+    width: 100%;
+    margin-top: 1.3rem !important;
+    overflow-x: scroll;
+    white-space: nowrap;
+    height: 9rem;
+    padding: 0 2rem;
+    /* background-color: antiquewhite; */
+  }
+  .s-services .tab-services::-webkit-scrollbar {
+    display: none;
+  }
+  .s-services .tab-services .btn-tab .avatar {
+    right: -34px;
+    bottom: 10px;
+    width: 90px !important;
+    height: 90px;
+  }
+  .s-services .tab-services .btn-tab {
+    padding: 0 6rem 0;
+  }
+  .s-services .TabActiveBtn .under-btn:after {
+    right: 120px;
+  }
+  .s-services .p-body-tab .p-box .box {
+    height: auto;
+  }
+  .flexMobileService {
+    flex-direction: column-reverse !important;
+  }
+  .zeus {
+    width: 60% !important;
+    right: -50px;
+  }
+  .s-services .p-body-tab {
+    margin-top: 2rem;
+  }
+  .s-services .text-avatar-fix {
+    top: 25px;
+    right: 17%;
+  }
+
+  .width-service {
+    width: 100% !important;
+  }
+  .title-box-service {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .grid-service {
+    display: grid;
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .btnTablet {
+    width: 100% !important;
+    margin: 0 auto;
+  }
+  .colorStep {
+    color: #a8b0a5;
+  }
+  .boxStep {
+    width: 100%;
+    height: 350px;
+    background: #ffffff;
+    position: relative;
+    z-index: 10;
+    padding: 2rem;
+    overflow-y: auto;
+  }
+  .underStep {
+    width: 100%;
+    height: 350px;
+    background: #d4d4d4;
+    position: absolute;
+    z-index: 1;
+    right: -5px;
+    bottom: -5px;
+  }
+  .portCol {
+    flex-direction: column;
+    align-items: unset;
+    gap: 2.5rem;
+  }
+  .portOptions {
+    width: 100% !important;
+    white-space: nowrap;
+    overflow-x: scroll;
+    height: 110px !important;
+    place-items: unset;
+  }
+  .portOptions button {
+    width: 100% !important;
+    padding: 0 6rem;
+  }
+  .portOptions::-webkit-scrollbar {
+    display: none;
+  }
+  .s-portfolio {
+    margin-top: 2.5rem;
+  }
+  .s-banner .p-banner {
+    background: unset;
+    background-color: rgb(242, 242, 242);
+    height: auto;
+    padding: 3.5rem 1rem;
+  }
+  .s-banner .p-banner h2 {
+    text-align: center;
+  }
+  .bannerCol {
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: center;
+    width: 80% !important;
+  }
+  .bannerCol a.btn-base {
+    margin: 0;
+  }
+  .mobileWidth {
+    width: 100% !important;
+  }
+  .s-product .box-text-p {
+    left: 4%;
+    top: 70px;
+    width: 183px;
+  }
+
+  .serviceTowCol {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .textStepTablet {
+    margin: 0 auto;
   }
 }

@@ -211,23 +211,17 @@
     <!-- header-mobile -->
     <header class="header-mobile">
       <!-- menu  -->
-      <span>
-        <svg
-          width="32px"
-          height="32px"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M4 6H20M4 12H20M4 18H20"
-            stroke="#212e47"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </span>
+      <div id="menuIcon" class="containerMenu" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+      <div id="titleMenuJs">
+        <div id="name-parnas" class="name-parnas titleMenu">
+          <h1 class="text-gold-2 t kalameh-bold m-y-0">آژانس خلاقیت پارناس</h1>
+          <h1 class="b">ایــــدتـو ، ایـــــده آل کــــن !</h1>
+        </div>
+      </div>
       <a id="logo-parnas" href="" class="logo-website logo-header-res">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -289,7 +283,7 @@
           </g>
         </svg>
       </a>
-      <div class="end flex-x-end res-header">
+      <div class="end flex-x-end res-header" id="menuDlt">
         <div class="language flex-x-center gap-14">
           <div class="bg">
             <img src="../../assets/img/flaq-en.png" alt="" />
@@ -341,6 +335,59 @@
       </div>
     </header>
     <!-- header-mobile -->
+
+    <!-- menu mobile-tablet -->
+    <section id="menu">
+      <div class="nav">
+        <a class="link-header" href="">طراحی سایت</a>
+        <a class="link-header" href="">طراحی فروشگاه اینترنتی</a>
+        <a class="link-header" href="">دیجیتال مارکتینگ</a>
+        <a class="link-header" href="">اخبار و مقالات</a>
+      </div>
+      <div class="l-header">
+        <div class="contact-header contactMenu">
+          <div class="flex-y-start">
+            <a href="" class="number">
+              <strong class="fs-18 kalameh-bold text-gold-2"
+                >7105 7559</strong
+              >
+              <strong class="fs-18 kalameh-bold text-base m-x-2">-</strong>
+              <strong class="fs-18 kalameh-bold text-base">021</strong>
+            </a>
+            <span class="fs-11 text-gray bold-600"
+              >تــماس بــــا کــارشـنــاســـان مــــا</span
+            >
+          </div>
+          <a class="m-right-13 p-relative top-3" href="">
+            <svg
+              id="Component_1_2"
+              data-name="Component 1 – 2"
+              xmlns="http://www.w3.org/2000/svg"
+              width="45"
+              height="45"
+              viewBox="0 0 54 54"
+            >
+              <circle
+                id="Ellipse_456"
+                data-name="Ellipse 456"
+                cx="27"
+                cy="27"
+                r="27"
+                fill="#212e47"
+              />
+              <path
+                id="phone-call_1_"
+                data-name="phone-call (1)"
+                d="M20.583,9.842a.9.9,0,0,1-.895-.895A7.165,7.165,0,0,0,12.53,1.789.895.895,0,0,1,12.53,0a8.957,8.957,0,0,1,8.947,8.947A.9.9,0,0,1,20.583,9.842ZM17.9,8.947A5.368,5.368,0,0,0,12.53,3.579a.895.895,0,1,0,0,1.789,3.579,3.579,0,0,1,3.579,3.579.895.895,0,0,0,1.789,0Zm1.953,10.884.814-.939a2.774,2.774,0,0,0,0-3.916c-.028-.028-2.18-1.684-2.18-1.684a2.774,2.774,0,0,0-3.83.005L12.95,14.734a11.438,11.438,0,0,1-6.2-6.213l1.432-1.7A2.774,2.774,0,0,0,8.185,2.99S6.527.84,6.5.812A2.758,2.758,0,0,0,2.629.771L1.6,1.666C-4.479,8.718,8.611,21.707,15.9,21.473a5.507,5.507,0,0,0,3.956-1.643Z"
+                transform="translate(16.402 15.157)"
+                fill="#fff"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- menu mobile-tablet -->
 
     <!--s-main-->
     <section class="s-main">
@@ -411,7 +458,7 @@
 
     <!-- s-main-mobile -->
     <section class="s-main-mobile">
-      <div class="title-website">
+      <div class="title-website titleTablet">
         <h2 class="kalameh-bold">کسب و کار خود را متوقف کنید؛ اما روی قله.</h2>
       </div>
       <p class="text-main">
@@ -499,7 +546,7 @@
 
     <!--s-about-mobile-->
     <section class="s-mobile">
-      <div class="title-website">
+      <div class="title-website titleTablet">
         <h2 class="kalameh-bold">
           داستان پارناس ؛ یک کوه، یک جمع خلاق، یک خیال
         </h2>
@@ -527,8 +574,8 @@
           تعریف می‌کنم. حالا حالاها باهم کار داریم.
         </p>
         <div class="w-70 grid-2 gap-30 m-top-25 btn-mobile-about">
-          <a href="" class="btn-base w-100"> درباره پارناس </a>
-          <a href="" class="btn-gold w-100"> تیم خلاق پارناس </a>
+          <a href="" class="btn-base btnTablet w-100"> درباره پارناس </a>
+          <a href="" class="btn-gold btnTablet w-100"> تیم خلاق پارناس </a>
         </div>
       </div>
     </section>
@@ -539,7 +586,7 @@
       <div class="prs-responsive">
         <div class="p-services flex-y-center w-90 mx-auto">
           <div class="w-100 flex-x-start">
-            <div class="title-website">
+            <div class="title-website titleTablet">
               <div class="flex-y-start service-center">
                 <h2 class="kalameh-bold">سرویس های پارناس با خدایان یونان</h2>
                 <span class="fs-14 text-gray bold-600"
@@ -727,8 +774,10 @@
                     </template>
                   </div>
                   <div class="flex-x-center w-100 m-top-40 gap-30 grid-service">
-                    <a href="" class="btn-base w-36"> طراحی سایت </a>
-                    <a href="" class="btn-gold w-36"> نمونه کار طراحی سایت </a>
+                    <a href="" class="btn-base w-36 btnTablet"> طراحی سایت </a>
+                    <a href="" class="btn-gold w-36 btnTablet">
+                      نمونه کار طراحی سایت
+                    </a>
                   </div>
                 </div>
                 <div class="under"></div>
@@ -1328,7 +1377,7 @@
 
     <!--s-step-mobile-->
     <section class="s-mobile">
-      <div class="flex-x-center m-top-8">
+      <div class="flex-x-center m-top-8 titleTablet textStepTablet">
         <h2 class="kalameh-bold fs-16 m-right-14 text-base m-y-0">
           سفر 7 مرحله‌ایِ دونفره
         </h2>
@@ -1363,23 +1412,22 @@
               x-collapse.min.200px
               class="text text-base fs-14 text-justify lineH-24"
             >
-              سرویس‌های مختلف مثل فروش آنلاین، ورود به شبکه‌های اجتماعی
-              و…زمانی بدرد می‌خورند که به هدف‌هامان نزدیک کنند؛ وگرنه مثلا
-              خودِ وبسایت داشتن که برای ما پول و ارزش نمی‌شود. داستان تمایز
-              پارناس با بقیه آژانس‌های فول‌سرویس از همین نقطه شروع می‌شود.
-              آژانس‌های فول سرویس خدمات مشخص دارند که به هر کسب و کاری آنرا
-              ارائه می‌دهند. طراحی وبسایت، خدمات دیجیتال مارکتینگ، تبلیغات
-              محیطی، تیزر، کمپین تبلیغاتی و…نقطه‌هایی جدا از هم که خیلی وقت‌ها
-              اصلا مناسب کسب و کارتان نیستن و فقط منابع کسب کار شما را هدر
-              می‌دهند. یک پروژۀ از اول شکست خورده؛ اما برای مجموعۀ ما فروش
-              سرویس هیچ اهمیتی ندارد، ما بدنبال توسعۀ درست کسب و کار شما با
-              استفاده از این سرویس‌ها هستیم. کسب و کاری آنرا ارائه می‌دهند.
-              طراحی وبسایت، خدمات دیجیتال مارکتینگ، تبلیغات محیطی، تیزر، کمپین
+              سرویس‌های مختلف مثل فروش آنلاین، ورود به شبکه‌های اجتماعی و…زمانی
+              بدرد می‌خورند که به هدف‌هامان نزدیک کنند؛ وگرنه مثلا خودِ وبسایت
+              داشتن که برای ما پول و ارزش نمی‌شود. داستان تمایز پارناس با بقیه
+              آژانس‌های فول‌سرویس از همین نقطه شروع می‌شود. آژانس‌های فول سرویس
+              خدمات مشخص دارند که به هر کسب و کاری آنرا ارائه می‌دهند. طراحی
+              وبسایت، خدمات دیجیتال مارکتینگ، تبلیغات محیطی، تیزر، کمپین
               تبلیغاتی و…نقطه‌هایی جدا از هم که خیلی وقت‌ها اصلا مناسب کسب و
               کارتان نیستن و فقط منابع کسب کار شما را هدر می‌دهند. یک پروژۀ از
-              اول شکست خورده؛ اما برای مجموعۀ ما فروش سرویس هیچ اهمیتی ندارد،
-              ما بدنبال توسعۀ درست کسب و کار شما با استفاده از این سرویس‌ها
-              هستیم.
+              اول شکست خورده؛ اما برای مجموعۀ ما فروش سرویس هیچ اهمیتی ندارد، ما
+              بدنبال توسعۀ درست کسب و کار شما با استفاده از این سرویس‌ها هستیم.
+              کسب و کاری آنرا ارائه می‌دهند. طراحی وبسایت، خدمات دیجیتال
+              مارکتینگ، تبلیغات محیطی، تیزر، کمپین تبلیغاتی و…نقطه‌هایی جدا از
+              هم که خیلی وقت‌ها اصلا مناسب کسب و کارتان نیستن و فقط منابع کسب
+              کار شما را هدر می‌دهند. یک پروژۀ از اول شکست خورده؛ اما برای
+              مجموعۀ ما فروش سرویس هیچ اهمیتی ندارد، ما بدنبال توسعۀ درست کسب و
+              کار شما با استفاده از این سرویس‌ها هستیم.
             </p>
 
             <div
@@ -1441,7 +1489,7 @@
       <div class="prs-responsive">
         <div class="p-portfolio flex-y-center w-90 mx-auto">
           <div class="w-100 flex-x-between top portCol">
-            <div class="title-website">
+            <div class="title-website titleTablet">
               <div class="flex-y-start portTitleCenter">
                 <h2 class="kalameh-bold">پروژه های با ارزش پارناس</h2>
                 <span class="fs-13 bold-600 text-gray"
@@ -1551,8 +1599,6 @@
       </div>
     </section>
     <!--s-portfolio-->
-
-    
 
     <!--s-banner-->
     <section class="s-banner">
@@ -1854,7 +1900,9 @@
               >از ۳ تا ۱۲ ماه خدمات پشتیبانی رایگان برای همه قرارداد ها !</span
             >
           </div>
-          <div class="row-p-support m-top-40 w-100 flex-x-between-v serviceTowCol">
+          <div
+            class="row-p-support m-top-40 w-100 flex-x-between-v serviceTowCol"
+          >
             <div class="support flex-y-center w-47 wm-100">
               <img
                 class="img-support w-100"
@@ -3260,7 +3308,11 @@
 
     <script src="//unpkg.com/alpinejs" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
+    <script>
+      function myFunction(x) {
+        x.classList.toggle("change");
+      }
+    </script>
     <script>
       var swiper = new Swiper(".mySwiper", {
         slidesPerView: 1,
@@ -3270,7 +3322,10 @@
           prevEl: ".swiper-button-prev",
         },
         breakpoints: {
-          640: {
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
             slidesPerView: 4,
           },
         },
@@ -3283,7 +3338,10 @@
           prevEl: ".swiper-button-prev-cooperation",
         },
         breakpoints: {
-          640: {
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
             slidesPerView: 3,
           },
         },
@@ -3314,5 +3372,7 @@
         }
       });
     </script>
+
+    <script type="text/javascript" src="../../assets/js/menu.js"></script>
   </body>
 </html>
