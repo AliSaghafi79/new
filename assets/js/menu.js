@@ -8,9 +8,12 @@ menuIcon.addEventListener("click", function () {
     menu.style.width = "0%";
     menuDlt.style.display = "flex";
     titleMenuJs.style.display = "none";
+    document.body.style.overflow = "auto";
+
   } else {
     menu.style.width = "100%";
     menuDlt.style.display = "none";
     titleMenuJs.style.display = "block";
+    document.body.style.overflow = "hidden";
   }
 });
